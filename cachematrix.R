@@ -20,15 +20,11 @@ makeCacheMatrix <- function(x = matrix()) {
         list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
 }
 
-
-
-##The following function takes as input the matrix/list given
-##by the first function. First it uses the function
-##getinverse(). If the inverse has been already calculated
-## it returns the inverse. Otherwise, it gets the matrix throught
-## the get() function, computes the inverse throught "solve"
-## sets the value of the inverse in cache using the setinverse()
-##function
+##The following function takes as input the matrix/list given by the first 
+##function. First it uses the function getinverse(). If the inverse has been 
+##already calculated it returns the inverse. Otherwise, it gets the matrix 
+##throught the get() function, computes the inverse throught "solve"
+##sets the value of the inverse in cache using the setinverse() function.
 
 cacheSolve <- function(x, ...) {
         i <- x$getinverse()
